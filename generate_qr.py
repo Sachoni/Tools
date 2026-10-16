@@ -1,25 +1,15 @@
 
 # ==========================================================
-# LUDA SERVICES - QR CODE GENERATOR
-# Creates a QR code that redirects customers to your website.
+# QR CODE GENERATOR
 # ==========================================================
 
 import qrcode
 from pathlib import Path
 
-# ----------------------------------------------------------
-# 1. WEBSITE URL
-# Replace this with your actual deployed website URL.
-# Examples:
-# https://yourname.github.io/Luda-Services/
-# https://your-website.vercel.app/
-# ----------------------------------------------------------
-
 website_url = "https://sachoni.github.io/LUDA-SERVICES/"
 
 # ----------------------------------------------------------
 # 2. OUTPUT FILE
-# The QR image will be saved in the same folder as this file.
 # ----------------------------------------------------------
 
 output_file = Path(__file__).parent / "luda_services_qr.png"
@@ -46,7 +36,7 @@ qr_image = qr.make_image(
 )
 
 # ----------------------------------------------------------
-# 4. SAVE THE QR CODE
+# 4. QR CODE
 # ----------------------------------------------------------
 
 qr_image.save(output_file)
